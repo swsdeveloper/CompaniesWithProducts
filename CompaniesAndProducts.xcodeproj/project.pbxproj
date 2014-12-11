@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A45B2E31A3A1B7900B6EF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2D31A3A1B7900B6EF4E /* AppDelegate.m */; };
 		0A45B2E41A3A1B7900B6EF4E /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2D41A3A1B7900B6EF4E /* ChildViewController.m */; };
 		0A45B2E51A3A1B7900B6EF4E /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2D51A3A1B7900B6EF4E /* Company.m */; };
 		0A45B2E61A3A1B7900B6EF4E /* DataAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2D61A3A1B7900B6EF4E /* DataAccessObject.m */; };
@@ -20,13 +19,29 @@
 		0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */; };
 		0A45B2F01A3A1B7900B6EF4E /* StockQuoteFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */; };
 		0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */; };
-		0A45B2F21A3A1B7900B6EF4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E21A3A1B7900B6EF4E /* ViewController.m */; };
-		0A45B2F61A3A1B8800B6EF4E /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A45B2F31A3A1B8800B6EF4E /* ChildViewController.xib */; };
-		0A45B2F71A3A1B8800B6EF4E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A45B2F41A3A1B8800B6EF4E /* DetailViewController.xib */; };
-		0A45B2F81A3A1B8800B6EF4E /* qcdDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A45B2F51A3A1B8800B6EF4E /* qcdDemoViewController.xib */; };
 		0ACA11B31A3A22370064BC14 /* NSObject+BVJSONStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA11B01A3A22370064BC14 /* NSObject+BVJSONStringCategory.m */; };
 		0ACA11B41A3A22370064BC14 /* NSString+FindSubstringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA11B21A3A22370064BC14 /* NSString+FindSubstringCategory.m */; };
 		0ACA11B61A3A23720064BC14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA11B51A3A23720064BC14 /* Images.xcassets */; };
+		0ACA11F81A3A2ABE0064BC14 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA11F71A3A2ABE0064BC14 /* ChildViewController.xib */; };
+		0ACA11FB1A3A2AF40064BC14 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA11F91A3A2AF40064BC14 /* DetailViewController.xib */; };
+		0ACA11FC1A3A2AF40064BC14 /* qcdDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA11FA1A3A2AF40064BC14 /* qcdDemoViewController.xib */; };
+		0ACA12061A3A2D1B0064BC14 /* Warnings.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12051A3A2D1B0064BC14 /* Warnings.xcconfig */; };
+		0ACA12181A3A2E7D0064BC14 /* AppleLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12081A3A2E7D0064BC14 /* AppleLogo.jpeg */; };
+		0ACA12191A3A2E7D0064BC14 /* EverythingLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12091A3A2E7D0064BC14 /* EverythingLogo.png */; };
+		0ACA121A1A3A2E7D0064BC14 /* EverythingMusicPlayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120A1A3A2E7D0064BC14 /* EverythingMusicPlayer.png */; };
+		0ACA121B1A3A2E7D0064BC14 /* EverythingPhone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120B1A3A2E7D0064BC14 /* EverythingPhone.jpg */; };
+		0ACA121C1A3A2E7D0064BC14 /* EverythingTablet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120C1A3A2E7D0064BC14 /* EverythingTablet.png */; };
+		0ACA121D1A3A2E7D0064BC14 /* GalaxyNote.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120D1A3A2E7D0064BC14 /* GalaxyNote.png */; };
+		0ACA121E1A3A2E7D0064BC14 /* GalaxyS4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120E1A3A2E7D0064BC14 /* GalaxyS4.jpeg */; };
+		0ACA121F1A3A2E7D0064BC14 /* GalaxyTab.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA120F1A3A2E7D0064BC14 /* GalaxyTab.jpeg */; };
+		0ACA12201A3A2E7D0064BC14 /* iPadAir.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12101A3A2E7D0064BC14 /* iPadAir.png */; };
+		0ACA12211A3A2E7D0064BC14 /* iPhone6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12111A3A2E7D0064BC14 /* iPhone6.jpeg */; };
+		0ACA12221A3A2E7D0064BC14 /* iPodTouch.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12121A3A2E7D0064BC14 /* iPodTouch.jpeg */; };
+		0ACA12231A3A2E7D0064BC14 /* Lumia.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12131A3A2E7D0064BC14 /* Lumia.png */; };
+		0ACA12241A3A2E7D0064BC14 /* MicrosoftLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12141A3A2E7D0064BC14 /* MicrosoftLogo.png */; };
+		0ACA12251A3A2E7D0064BC14 /* SamsungLogo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12151A3A2E7D0064BC14 /* SamsungLogo.jpeg */; };
+		0ACA12261A3A2E7D0064BC14 /* SurfacePro.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12161A3A2E7D0064BC14 /* SurfacePro.png */; };
+		0ACA12271A3A2E7D0064BC14 /* WindowsPhone.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA12171A3A2E7D0064BC14 /* WindowsPhone.jpeg */; };
 		0AF3EAF01A37E08200F09A43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF3EAEF1A37E08200F09A43 /* Foundation.framework */; };
 		0AF3EAF21A37E09300F09A43 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF3EAF11A37E09300F09A43 /* libsqlite3.0.dylib */; };
 		0AF3EAF41A37E0F300F09A43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF3EAF31A37E0F300F09A43 /* CoreGraphics.framework */; };
@@ -44,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A45B2C31A3A1B6400B6EF4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A45B2C41A3A1B6400B6EF4E /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		0A45B2C51A3A1B6400B6EF4E /* Company.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
 		0A45B2C61A3A1B6400B6EF4E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -57,8 +71,6 @@
 		0A45B2CF1A3A1B6400B6EF4E /* SQLiteAccessObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteAccessObject.h; sourceTree = "<group>"; };
 		0A45B2D01A3A1B6400B6EF4E /* StockQuoteFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockQuoteFetcher.h; sourceTree = "<group>"; };
 		0A45B2D11A3A1B6400B6EF4E /* UserDefaultsAccessObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDefaultsAccessObject.h; sourceTree = "<group>"; };
-		0A45B2D21A3A1B6400B6EF4E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A45B2D31A3A1B7900B6EF4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A45B2D41A3A1B7900B6EF4E /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		0A45B2D51A3A1B7900B6EF4E /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
 		0A45B2D61A3A1B7900B6EF4E /* DataAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccessObject.m; sourceTree = "<group>"; };
@@ -71,20 +83,35 @@
 		0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteAccessObject.m; sourceTree = "<group>"; };
 		0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockQuoteFetcher.m; sourceTree = "<group>"; };
 		0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsAccessObject.m; sourceTree = "<group>"; };
-		0A45B2E21A3A1B7900B6EF4E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0A45B2F31A3A1B8800B6EF4E /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
-		0A45B2F41A3A1B8800B6EF4E /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		0A45B2F51A3A1B8800B6EF4E /* qcdDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = qcdDemoViewController.xib; sourceTree = "<group>"; };
 		0A45B2FF1A3A1CBC00B6EF4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		0ACA11AF1A3A22370064BC14 /* NSObject+BVJSONStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BVJSONStringCategory.h"; sourceTree = "<group>"; };
 		0ACA11B01A3A22370064BC14 /* NSObject+BVJSONStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BVJSONStringCategory.m"; sourceTree = "<group>"; };
 		0ACA11B11A3A22370064BC14 /* NSString+FindSubstringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FindSubstringCategory.h"; sourceTree = "<group>"; };
 		0ACA11B21A3A22370064BC14 /* NSString+FindSubstringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FindSubstringCategory.m"; sourceTree = "<group>"; };
 		0ACA11B51A3A23720064BC14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
+		0ACA11F71A3A2ABE0064BC14 /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = SOURCE_ROOT; };
+		0ACA11F91A3A2AF40064BC14 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = SOURCE_ROOT; };
+		0ACA11FA1A3A2AF40064BC14 /* qcdDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = qcdDemoViewController.xib; sourceTree = SOURCE_ROOT; };
+		0ACA12051A3A2D1B0064BC14 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+		0ACA12081A3A2E7D0064BC14 /* AppleLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppleLogo.jpeg; sourceTree = "<group>"; };
+		0ACA12091A3A2E7D0064BC14 /* EverythingLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EverythingLogo.png; sourceTree = "<group>"; };
+		0ACA120A1A3A2E7D0064BC14 /* EverythingMusicPlayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EverythingMusicPlayer.png; sourceTree = "<group>"; };
+		0ACA120B1A3A2E7D0064BC14 /* EverythingPhone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EverythingPhone.jpg; sourceTree = "<group>"; };
+		0ACA120C1A3A2E7D0064BC14 /* EverythingTablet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EverythingTablet.png; sourceTree = "<group>"; };
+		0ACA120D1A3A2E7D0064BC14 /* GalaxyNote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GalaxyNote.png; sourceTree = "<group>"; };
+		0ACA120E1A3A2E7D0064BC14 /* GalaxyS4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GalaxyS4.jpeg; sourceTree = "<group>"; };
+		0ACA120F1A3A2E7D0064BC14 /* GalaxyTab.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GalaxyTab.jpeg; sourceTree = "<group>"; };
+		0ACA12101A3A2E7D0064BC14 /* iPadAir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAir.png; sourceTree = "<group>"; };
+		0ACA12111A3A2E7D0064BC14 /* iPhone6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPhone6.jpeg; sourceTree = "<group>"; };
+		0ACA12121A3A2E7D0064BC14 /* iPodTouch.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPodTouch.jpeg; sourceTree = "<group>"; };
+		0ACA12131A3A2E7D0064BC14 /* Lumia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lumia.png; sourceTree = "<group>"; };
+		0ACA12141A3A2E7D0064BC14 /* MicrosoftLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MicrosoftLogo.png; sourceTree = "<group>"; };
+		0ACA12151A3A2E7D0064BC14 /* SamsungLogo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SamsungLogo.jpeg; sourceTree = "<group>"; };
+		0ACA12161A3A2E7D0064BC14 /* SurfacePro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SurfacePro.png; sourceTree = "<group>"; };
+		0ACA12171A3A2E7D0064BC14 /* WindowsPhone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WindowsPhone.jpeg; sourceTree = "<group>"; };
 		0AF3EA6D1A37DCF600F09A43 /* CompaniesAndProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompaniesAndProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF3EA801A37DCF600F09A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0AF3EA861A37DCF600F09A43 /* CompaniesAndProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompaniesAndProductsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AF3EAEC1A37E01300F09A43 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		0AF3EAEF1A37E08200F09A43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0AF3EAF11A37E09300F09A43 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		0AF3EAF31A37E0F300F09A43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,45 +140,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AF3EA641A37DCF600F09A43 = {
+		0ACA11FE1A3A2BA80064BC14 /* CompaniesAndProducts */ = {
 			isa = PBXGroup;
 			children = (
-				0A45B2F31A3A1B8800B6EF4E /* ChildViewController.xib */,
-				0A45B2F41A3A1B8800B6EF4E /* DetailViewController.xib */,
-				0A45B2F51A3A1B8800B6EF4E /* qcdDemoViewController.xib */,
-				0A45B2C31A3A1B6400B6EF4E /* AppDelegate.h */,
-				0A45B2C41A3A1B6400B6EF4E /* ChildViewController.h */,
+				0ACA12001A3A2BD40064BC14 /* Common */,
+				0ACA12021A3A2C560064BC14 /* Models */,
+				0ACA12011A3A2C0E0064BC14 /* Views */,
+				0ACA12031A3A2CB90064BC14 /* Controllers */,
+				0ACA12071A3A2D930064BC14 /* Images */,
+				0ACA11FF1A3A2BBF0064BC14 /* Categories */,
+				0ACA12041A3A2CFA0064BC14 /* Supporting Files */,
+			);
+			name = CompaniesAndProducts;
+			sourceTree = "<group>";
+		};
+		0ACA11FF1A3A2BBF0064BC14 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
 				0ACA11AF1A3A22370064BC14 /* NSObject+BVJSONStringCategory.h */,
 				0ACA11B01A3A22370064BC14 /* NSObject+BVJSONStringCategory.m */,
 				0ACA11B11A3A22370064BC14 /* NSString+FindSubstringCategory.h */,
 				0ACA11B21A3A22370064BC14 /* NSString+FindSubstringCategory.m */,
-				0A45B2C51A3A1B6400B6EF4E /* Company.h */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		0ACA12001A3A2BD40064BC14 /* Common */ = {
+			isa = PBXGroup;
+			children = (
 				0A45B2C61A3A1B6400B6EF4E /* Constants.h */,
-				0A45B2C71A3A1B6400B6EF4E /* DataAccessObject.h */,
-				0A45B2C81A3A1B6400B6EF4E /* DataBaseAccessObject.h */,
-				0A45B2C91A3A1B6400B6EF4E /* DetailViewController.h */,
-				0A45B2CC1A3A1B6400B6EF4E /* Product.h */,
-				0A45B2CD1A3A1B6400B6EF4E /* qcdDemoAppDelegate.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		0ACA12011A3A2C0E0064BC14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				0A45B2CE1A3A1B6400B6EF4E /* qcdDemoViewController.h */,
-				0A45B2CF1A3A1B6400B6EF4E /* SQLiteAccessObject.h */,
-				0A45B2D01A3A1B6400B6EF4E /* StockQuoteFetcher.h */,
-				0A45B2D11A3A1B6400B6EF4E /* UserDefaultsAccessObject.h */,
-				0A45B2D21A3A1B6400B6EF4E /* ViewController.h */,
-				0A45B2D31A3A1B7900B6EF4E /* AppDelegate.m */,
-				0A45B2D41A3A1B7900B6EF4E /* ChildViewController.m */,
-				0A45B2D51A3A1B7900B6EF4E /* Company.m */,
-				0A45B2D61A3A1B7900B6EF4E /* DataAccessObject.m */,
-				0A45B2D71A3A1B7900B6EF4E /* DataBaseAccessObject.m */,
-				0A45B2D81A3A1B7900B6EF4E /* DetailViewController.m */,
-				0A45B2D91A3A1B7900B6EF4E /* main.m */,
-				0A45B2DC1A3A1B7900B6EF4E /* Product.m */,
-				0A45B2DD1A3A1B7900B6EF4E /* qcdDemoAppDelegate.m */,
 				0A45B2DE1A3A1B7900B6EF4E /* qcdDemoViewController.m */,
-				0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */,
-				0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */,
+				0A45B2C41A3A1B6400B6EF4E /* ChildViewController.h */,
+				0A45B2D41A3A1B7900B6EF4E /* ChildViewController.m */,
+				0A45B2C91A3A1B6400B6EF4E /* DetailViewController.h */,
+				0A45B2D81A3A1B7900B6EF4E /* DetailViewController.m */,
+				0ACA11FA1A3A2AF40064BC14 /* qcdDemoViewController.xib */,
+				0ACA11F71A3A2ABE0064BC14 /* ChildViewController.xib */,
+				0ACA11F91A3A2AF40064BC14 /* DetailViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0ACA12021A3A2C560064BC14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A45B2C71A3A1B6400B6EF4E /* DataAccessObject.h */,
+				0A45B2D61A3A1B7900B6EF4E /* DataAccessObject.m */,
+				0A45B2C81A3A1B6400B6EF4E /* DataBaseAccessObject.h */,
+				0A45B2D71A3A1B7900B6EF4E /* DataBaseAccessObject.m */,
+				0A45B2D11A3A1B6400B6EF4E /* UserDefaultsAccessObject.h */,
 				0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */,
-				0A45B2E21A3A1B7900B6EF4E /* ViewController.m */,
-				0AF3EA6F1A37DCF600F09A43 /* CompaniesAndProducts */,
+				0A45B2C51A3A1B6400B6EF4E /* Company.h */,
+				0A45B2D51A3A1B7900B6EF4E /* Company.m */,
+				0A45B2CC1A3A1B6400B6EF4E /* Product.h */,
+				0A45B2DC1A3A1B7900B6EF4E /* Product.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0ACA12031A3A2CB90064BC14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A45B2CD1A3A1B6400B6EF4E /* qcdDemoAppDelegate.h */,
+				0A45B2DD1A3A1B7900B6EF4E /* qcdDemoAppDelegate.m */,
+				0A45B2CF1A3A1B6400B6EF4E /* SQLiteAccessObject.h */,
+				0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */,
+				0A45B2D01A3A1B6400B6EF4E /* StockQuoteFetcher.h */,
+				0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0ACA12041A3A2CFA0064BC14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A45B2D91A3A1B7900B6EF4E /* main.m */,
+				0ACA11B51A3A23720064BC14 /* Images.xcassets */,
+				0A45B2FF1A3A1CBC00B6EF4E /* Info.plist */,
+				0AF3EA7F1A37DCF600F09A43 /* LaunchScreen.xib */,
+				0ACA12051A3A2D1B0064BC14 /* Warnings.xcconfig */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ACA12071A3A2D930064BC14 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0ACA12081A3A2E7D0064BC14 /* AppleLogo.jpeg */,
+				0ACA12091A3A2E7D0064BC14 /* EverythingLogo.png */,
+				0ACA120A1A3A2E7D0064BC14 /* EverythingMusicPlayer.png */,
+				0ACA120B1A3A2E7D0064BC14 /* EverythingPhone.jpg */,
+				0ACA120C1A3A2E7D0064BC14 /* EverythingTablet.png */,
+				0ACA120D1A3A2E7D0064BC14 /* GalaxyNote.png */,
+				0ACA120E1A3A2E7D0064BC14 /* GalaxyS4.jpeg */,
+				0ACA120F1A3A2E7D0064BC14 /* GalaxyTab.jpeg */,
+				0ACA12101A3A2E7D0064BC14 /* iPadAir.png */,
+				0ACA12111A3A2E7D0064BC14 /* iPhone6.jpeg */,
+				0ACA12121A3A2E7D0064BC14 /* iPodTouch.jpeg */,
+				0ACA12131A3A2E7D0064BC14 /* Lumia.png */,
+				0ACA12141A3A2E7D0064BC14 /* MicrosoftLogo.png */,
+				0ACA12151A3A2E7D0064BC14 /* SamsungLogo.jpeg */,
+				0ACA12161A3A2E7D0064BC14 /* SurfacePro.png */,
+				0ACA12171A3A2E7D0064BC14 /* WindowsPhone.jpeg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0AF3EA641A37DCF600F09A43 = {
+			isa = PBXGroup;
+			children = (
+				0ACA11FE1A3A2BA80064BC14 /* CompaniesAndProducts */,
 				0AF3EAEE1A37E06000F09A43 /* Frameworks */,
 				0AF3EA891A37DCF600F09A43 /* CompaniesAndProductsTests */,
 				0AF3EA6E1A37DCF600F09A43 /* Products */,
@@ -165,31 +271,6 @@
 				0AF3EA861A37DCF600F09A43 /* CompaniesAndProductsTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0AF3EA6F1A37DCF600F09A43 /* CompaniesAndProducts */ = {
-			isa = PBXGroup;
-			children = (
-				0AF3EA991A37DD8300F09A43 /* Common */,
-				0AF3ED0E1A381BC300F09A43 /* Images */,
-				0AF3EA981A37DD3600F09A43 /* Views */,
-				0AF3EA961A37DD1D00F09A43 /* Models */,
-				0AF3EA971A37DD2700F09A43 /* Controllers */,
-				0AF3EB701A381AC000F09A43 /* Categories */,
-				0AF3EA701A37DCF600F09A43 /* Supporting Files */,
-			);
-			path = CompaniesAndProducts;
-			sourceTree = "<group>";
-		};
-		0AF3EA701A37DCF600F09A43 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0ACA11B51A3A23720064BC14 /* Images.xcassets */,
-				0A45B2FF1A3A1CBC00B6EF4E /* Info.plist */,
-				0AF3EA7F1A37DCF600F09A43 /* LaunchScreen.xib */,
-				0AF3EAEC1A37E01300F09A43 /* Warnings.xcconfig */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0AF3EA891A37DCF600F09A43 /* CompaniesAndProductsTests */ = {
@@ -207,34 +288,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0AF3EA961A37DD1D00F09A43 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		0AF3EA971A37DD2700F09A43 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		0AF3EA981A37DD3600F09A43 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		0AF3EA991A37DD8300F09A43 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Common;
-			sourceTree = "<group>";
-		};
 		0AF3EAEE1A37E06000F09A43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,22 +298,6 @@
 			);
 			name = Frameworks;
 			path = CompaniesAndProducts;
-			sourceTree = "<group>";
-		};
-		0AF3EB701A381AC000F09A43 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Categories;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0AF3ED0E1A381BC300F09A43 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Images;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +380,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A45B2F81A3A1B8800B6EF4E /* qcdDemoViewController.xib in Resources */,
+				0ACA12231A3A2E7D0064BC14 /* Lumia.png in Resources */,
+				0ACA12271A3A2E7D0064BC14 /* WindowsPhone.jpeg in Resources */,
+				0ACA12191A3A2E7D0064BC14 /* EverythingLogo.png in Resources */,
+				0ACA12221A3A2E7D0064BC14 /* iPodTouch.jpeg in Resources */,
 				0ACA11B61A3A23720064BC14 /* Images.xcassets in Resources */,
-				0A45B2F71A3A1B8800B6EF4E /* DetailViewController.xib in Resources */,
-				0A45B2F61A3A1B8800B6EF4E /* ChildViewController.xib in Resources */,
+				0ACA12251A3A2E7D0064BC14 /* SamsungLogo.jpeg in Resources */,
+				0ACA121F1A3A2E7D0064BC14 /* GalaxyTab.jpeg in Resources */,
+				0ACA12241A3A2E7D0064BC14 /* MicrosoftLogo.png in Resources */,
+				0ACA121D1A3A2E7D0064BC14 /* GalaxyNote.png in Resources */,
+				0ACA121B1A3A2E7D0064BC14 /* EverythingPhone.jpg in Resources */,
+				0ACA12211A3A2E7D0064BC14 /* iPhone6.jpeg in Resources */,
+				0ACA12181A3A2E7D0064BC14 /* AppleLogo.jpeg in Resources */,
+				0ACA12061A3A2D1B0064BC14 /* Warnings.xcconfig in Resources */,
+				0ACA121E1A3A2E7D0064BC14 /* GalaxyS4.jpeg in Resources */,
+				0ACA12201A3A2E7D0064BC14 /* iPadAir.png in Resources */,
+				0ACA11FB1A3A2AF40064BC14 /* DetailViewController.xib in Resources */,
+				0ACA11FC1A3A2AF40064BC14 /* qcdDemoViewController.xib in Resources */,
+				0ACA11F81A3A2ABE0064BC14 /* ChildViewController.xib in Resources */,
+				0ACA121C1A3A2E7D0064BC14 /* EverythingTablet.png in Resources */,
+				0ACA121A1A3A2E7D0064BC14 /* EverythingMusicPlayer.png in Resources */,
+				0ACA12261A3A2E7D0064BC14 /* SurfacePro.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +420,12 @@
 			files = (
 				0A45B2E61A3A1B7900B6EF4E /* DataAccessObject.m in Sources */,
 				0A45B2EC1A3A1B7900B6EF4E /* Product.m in Sources */,
-				0A45B2E31A3A1B7900B6EF4E /* AppDelegate.m in Sources */,
 				0A45B2E51A3A1B7900B6EF4E /* Company.m in Sources */,
 				0A45B2E71A3A1B7900B6EF4E /* DataBaseAccessObject.m in Sources */,
 				0A45B2EE1A3A1B7900B6EF4E /* qcdDemoViewController.m in Sources */,
 				0A45B2F01A3A1B7900B6EF4E /* StockQuoteFetcher.m in Sources */,
 				0A45B2E41A3A1B7900B6EF4E /* ChildViewController.m in Sources */,
 				0A45B2E91A3A1B7900B6EF4E /* main.m in Sources */,
-				0A45B2F21A3A1B7900B6EF4E /* ViewController.m in Sources */,
 				0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */,
 				0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */,
 				0ACA11B41A3A22370064BC14 /* NSString+FindSubstringCategory.m in Sources */,
@@ -407,6 +459,7 @@
 				0AF3EA801A37DCF600F09A43 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = CompaniesAndProducts;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

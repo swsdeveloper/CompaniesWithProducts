@@ -313,7 +313,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     Company *cCompany = [[Company alloc] initWithName:@"Microsoft" logo:@"MicrosoftLogo.png" stockSymbol:@"MSFT"];
     
     Product *c1Product = [[Product alloc] initWithName:@"Windows Phone 8"
-                                                  logo:[UIImage imageNamed:@"WindowsPhone8.jpeg"]
+                                                  logo:[UIImage imageNamed:@"WindowsPhone.jpeg"]
                                                    url:[NSURL URLWithString:@"http://www.windowsphone.com/en-us"]
                                                company:@"Microsoft"];
     Product *c2Product = [[Product alloc] initWithName:@"Surface Pro 3 Tablet"
