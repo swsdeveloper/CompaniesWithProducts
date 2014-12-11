@@ -24,6 +24,7 @@
 	`CoLogo`	TEXT,
 	`CoStockSymbol`	TEXT,
 	`CoDeleted`	INTEGER,
+	`CoSortID`	INTEGER,
 	PRIMARY KEY(CompanyName)
  )
  
@@ -33,6 +34,7 @@
 	`ProdLogo`	TEXT,
 	`ProdUrl`	TEXT,
 	`ProdDeleted`	INTEGER,
+	`ProdSortID`	INTEGER,
 	PRIMARY KEY(ProductName)
  )
  
@@ -90,11 +92,22 @@
         return;
     }
     
-    self.dao.companies = [self retrieveAllActiveCompaniesFromSql];
+    self.dao.companies = [[self retrieveAllActiveCompaniesFromSql] retain];
+    
+    // The companies array needs to be sorted by company.sortID:
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sortID" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    [self.dao.companies sortUsingDescriptors:sortDescriptors];
+    [sortDescriptor release];
+    
+    NSLog(@"Companies after sorting:\n");
+    for (Company *company in self.dao.companies) {
+        NSLog(@"%@ : %ld", company.name, company.sortID);
+    }
     
     NSLog(@"Finishing restoreAllCompaniesFromSqlite\n");
 }
-
 
 - (NSMutableArray *)retrieveAllActiveCompaniesFromSql {
     
@@ -128,6 +141,9 @@
                     NSString *coStockSymbol = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(self.sqlAO.preparedStmt, 2)];
                     // 3rd col (field) in returned Row
                     
+                    int coSortID = sqlite3_column_int(self.sqlAO.preparedStmt, 4);
+                    // 5th column (field) in returned Row
+                    
                     Company *company = [[Company alloc] init];
                     
                     [company setName: companyName];
@@ -135,11 +151,24 @@
                     [company setStockSymbol: coStockSymbol];
                     [company setProducts:[[NSMutableArray alloc] initWithObjects:nil]];
                     [company setDeleted:coDeleted];
+                    [company setSortID:coSortID];
                     
                     for (Product *product in dbProducts) {
                         if ([product.companyName isEqualToString:companyName]) {
                             [company.products addObject:product];
                         }
+                    }
+                    
+                    // The products array needs to be sorted by product.sortID:
+                    
+                    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sortID" ascending:YES];
+                    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+                    [company.products sortUsingDescriptors:sortDescriptors];
+                    [sortDescriptor release];
+                    
+                    NSLog(@"Products after sorting:\n");
+                    for (Product *product in company.products) {
+                        NSLog(@"%@ : %ld", product.name, product.sortID);
                     }
                     
                     [dbCompanies addObject:company];
@@ -194,6 +223,9 @@
                     NSString *prodUrl = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(self.sqlAO.preparedStmt, 3)];
                     // 4th col (field) in returned Row
                     
+                    int prodSortID = sqlite3_column_int(self.sqlAO.preparedStmt, 5);
+                    // 6th column (field) in returned Row
+                    
                     Product *product = [[Product alloc] init];
                     
                     [product setName: productName];
@@ -201,7 +233,8 @@
                     [product setLogo: [UIImage imageNamed: prodLogo]];
                     [product setUrl: [NSURL URLWithString: prodUrl]];
                     [product setDeleted:prodDeleted];
-                    
+                    [product setSortID:prodSortID];
+
                     [dbProducts addObject:product];
                 }
             }
@@ -226,7 +259,7 @@
     
     if (openRc == SQLITE_OK) {
         
-        NSString *updateStmt = [NSString stringWithFormat:@"UPDATE COMPANIES SET CODELETED = '%d' WHERE COMPANYNAME = \"%@\"", (company.deleted ? 1 : 0), company.name];
+        NSString *updateStmt = [NSString stringWithFormat:@"UPDATE COMPANIES SET CODELETED = '%d', COSORTID = '%ld' WHERE COMPANYNAME = \"%@\"", (company.deleted ? 1 : 0), company.sortID, company.name];
         
         const char *sql_stmt = [updateStmt UTF8String];
         
@@ -249,7 +282,7 @@
     
     if (openRc == SQLITE_OK) {
         
-        NSString *updateStmt = [NSString stringWithFormat:@"UPDATE PRODUCTS SET PRODDELETED = '%d' WHERE PRODUCTNAME = \"%@\"", (product.deleted ? 1 : 0), product.name];
+        NSString *updateStmt = [NSString stringWithFormat:@"UPDATE PRODUCTS SET PRODDELETED = '%d', PRODSORTID = '%ld' WHERE PRODUCTNAME = \"%@\"", (product.deleted ? 1 : 0), product.sortID, product.name];
         
         const char *sql_stmt = [updateStmt UTF8String];
         

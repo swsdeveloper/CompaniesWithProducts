@@ -24,6 +24,7 @@
         _logo = [prodLogo retain];
         _url = [prodUrl retain];
         _deleted = NO;
+        _sortID = _nextSortId++;
     }
     return self;
 }
@@ -53,6 +54,7 @@
     [encoder encodeObject:imageData forKey:@"logo"];
     [encoder encodeObject:[self url] forKey:@"url"];
     [encoder encodeBool:[self deleted] forKey:@"deleted"];
+    [encoder encodeInteger:[self sortID] forKey:@"sortID"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -68,6 +70,7 @@
         
         _url = [[decoder decodeObjectForKey:@"url"] retain];
         _deleted = [decoder decodeBoolForKey:@"deleted"];
+        _sortID = [decoder decodeIntegerForKey:@"sortID"];
     }
     return self;
 }

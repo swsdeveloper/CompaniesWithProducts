@@ -7,6 +7,7 @@
 
 #import "Company.h"
 
+
 @implementation Company
 
 //-(Company *)init {
@@ -23,6 +24,7 @@
         _products = [[NSMutableArray alloc] initWithCapacity:5];
         _stockSymbol = [[NSString alloc] initWithString:coStockSymbol];
         _deleted = NO;
+        _sortID = _nextSortId++;
     }
     
     //NSLog(@"_name = %@", _name);
@@ -87,6 +89,7 @@
     [encoder encodeObject:[self products] forKey:@"products"];
     [encoder encodeObject:[self stockSymbol] forKey:@"stockSymbol"];
     [encoder encodeBool:[self deleted] forKey:@"deleted"];
+    [encoder encodeInteger:[self sortID] forKey:@"sortID"];
     
 //    // Debugging: Save the logo UIImage as a file - logoIn.jpg
 //    if ([self.name isEqualToString:@"Apple"]) {
@@ -118,6 +121,7 @@
         _products = [[decoder decodeObjectForKey:@"products"] retain];
         _stockSymbol = [[decoder decodeObjectForKey:@"stockSymbol"] retain];
         _deleted = [decoder decodeBoolForKey:@"deleted"];
+        _sortID = [decoder decodeIntegerForKey:@"sortID"];
         
 //        // Debugging: Save the logo UIImage as a file - logoOut.jpg
 //        if ([_name isEqualToString:@"Apple"]) {

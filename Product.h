@@ -10,7 +10,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Product : NSObject
+@interface Product : NSObject {
+    
+    NSInteger _nextSortId;
+    
+}
+
 
 @property (retain, nonatomic) NSString *companyName;    // Company that Product belongs to
 
@@ -21,6 +26,9 @@
 @property (retain, nonatomic) NSURL *url;
 
 @property (assign, nonatomic) BOOL deleted;     // If YES, this product has been marked as deleted
+
+@property (assign, nonatomic) NSInteger sortID;
+
 
 -(id)initWithName:(NSString *)prodName logo:(UIImage *)prodLogo url:(NSURL *)prodUrl company:(NSString *)prodCompany;
 

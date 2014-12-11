@@ -9,7 +9,11 @@
 #import "Product.h"
 
 
-@interface Company : NSObject <NSCoding>
+@interface Company : NSObject <NSCoding> {
+    
+    NSInteger _nextSortId;
+    
+}
 
 @property (retain, nonatomic) NSString *name;
 
@@ -20,6 +24,8 @@
 @property (retain, nonatomic) NSString *stockSymbol;
 
 @property (assign, nonatomic) BOOL deleted;     // If YES, this company has been marked as deleted
+
+@property (assign, nonatomic) NSInteger sortID;
 
 
 -(id)initWithName:(NSString *)coName logo:(NSString *)coLogo stockSymbol:(NSString *)coStockSymbol;

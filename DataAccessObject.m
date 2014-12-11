@@ -185,6 +185,16 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     NSLog(@"\nin DAO moveCompanyFromIndex");
     
     //NSLog(@"\nMove %@ From Index: %ld, To Index: %ld", [[self.companies objectAtIndex:fromIndex] name] ,fromIndex, toIndex);
+    
+    NSMutableArray *saveSortIDs = [[NSMutableArray alloc] initWithObjects:nil];
+    for (Company *company in self.companies) {
+        [saveSortIDs addObject:[NSNumber numberWithInteger:company.sortID]];
+    }
+    
+    NSLog(@"sortIDs before:");
+    for (Company *company in self.companies) {
+        NSLog(@"%@ : %ld", company.name, company.sortID);
+    }
 
     Company *aCompany = [[self.companies objectAtIndex:fromIndex] retain];  // save the company that is being moved
     
@@ -197,7 +207,19 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     [aCompany release];
     aCompany = nil;
     
+    for (int i=0; i<[self.companies count]; i++) {
+        NSInteger newSortID = [saveSortIDs[i] intValue];        // NSNumber object to NSInteger primitive
+        [self.companies[i] setSortID:newSortID];
+    }
+    
+    NSLog(@"sortIDs after:");
+    for (Company *company in self.companies) {
+        NSLog(@"%@ : %ld", company.name, company.sortID);
+    }
+    
     [self saveAllCompanies];
+    
+    [saveSortIDs release];
 }
 
 - (NSMutableArray *)getAllCompanyStockSymbols {
@@ -249,6 +271,16 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     NSLog(@"in DAO moveProductFromIndex");
     //NSLog(@"\nMove %@ From Index: %ld, To Index: %ld", [[self.products objectAtIndex:fromIndex] name] ,fromIndex, toIndex);
     
+    NSMutableArray *saveSortIDs = [[NSMutableArray alloc] initWithObjects:nil];
+    for (Product *product in self.products) {
+        [saveSortIDs addObject:[NSNumber numberWithInteger:product.sortID]];
+    }
+    
+    NSLog(@"sortIDs before:");
+    for (Company *product in self.products) {
+        NSLog(@"%@ : %ld", product.name, product.sortID);
+    }
+    
     Product *aProduct = [[self.products objectAtIndex:fromIndex] retain];  // save the product that is being moved
     
     //NSLog(@"Remove %@ from index: %ld", [[self.products objectAtIndex:fromIndex] name] ,fromIndex);
@@ -260,7 +292,19 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     [aProduct release];
     aProduct = nil;
     
+    for (int i=0; i<[self.products count]; i++) {
+        NSInteger newSortID = [saveSortIDs[i] intValue];        // NSNumber object to NSInteger primitive
+        [self.products[i] setSortID:newSortID];
+    }
+    
+    NSLog(@"sortIDs after:");
+    for (Product *product in self.products) {
+        NSLog(@"%@ : %ld", product.name, product.sortID);
+    }
+    
     [self saveAllCompanies];
+    
+    [saveSortIDs release];
 }
 
 
