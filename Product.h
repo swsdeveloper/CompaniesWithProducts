@@ -10,11 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Product : NSObject {
-    
-    NSInteger _nextSortId;
-    
-}
+@interface Product : NSObject
 
 
 @property (retain, nonatomic) NSString *companyName;    // Company that Product belongs to

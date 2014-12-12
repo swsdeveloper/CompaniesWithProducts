@@ -8,6 +8,9 @@
 #import "Company.h"
 
 
+static int nextCompanyID = 0;
+
+
 @implementation Company
 
 //-(Company *)init {
@@ -24,7 +27,7 @@
         _products = [[NSMutableArray alloc] initWithCapacity:5];
         _stockSymbol = [[NSString alloc] initWithString:coStockSymbol];
         _deleted = NO;
-        _sortID = _nextSortId++;
+        _sortID = nextCompanyID++;
     }
     
     //NSLog(@"_name = %@", _name);

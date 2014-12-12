@@ -38,6 +38,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     self = [super init];
     if (self) {
         NSLog(@"allocating empty companies and products arrays");
+        
         _companies = [[NSMutableArray alloc] initWithObjects:nil];
         _products = [[NSMutableArray alloc] initWithObjects:nil];
         _stockSymbols = [[NSMutableArray alloc] initWithObjects: nil];

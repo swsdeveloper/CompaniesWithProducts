@@ -9,11 +9,8 @@
 #import "Product.h"
 
 
-@interface Company : NSObject <NSCoding> {
-    
-    NSInteger _nextSortId;
-    
-}
+@interface Company : NSObject <NSCoding>
+
 
 @property (retain, nonatomic) NSString *name;
 

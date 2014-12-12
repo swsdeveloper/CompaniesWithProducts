@@ -7,6 +7,10 @@
 
 #import "Product.h"
 
+
+static int nextProductID = 0;
+
+
 @implementation Product
 
 //-(Product *)init {
@@ -24,7 +28,7 @@
         _logo = [prodLogo retain];
         _url = [prodUrl retain];
         _deleted = NO;
-        _sortID = _nextSortId++;
+        _sortID = nextProductID++;
     }
     return self;
 }
