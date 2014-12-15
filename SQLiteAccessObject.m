@@ -27,10 +27,15 @@
     self = [super init];
     if (self) {
         _dbIsOpen = NO;
-        _sqlDbName = dbName;
+        _sqlDbName = [dbName retain];
         _database = nil;
     }
     return self;
+}
+
+- (void)dealloc {
+    [_sqlDbName release];
+    [super dealloc];
 }
 
 // This method should never be called
@@ -40,7 +45,7 @@
 
 - (int)openDatabase {
     
-    if (MYDEBUG) { NSLog(@"\nOPEN database"); }
+    if (MYDEBUG) { NSLog(@"\n in SQLAO openDatabase: "); }
     
     if (self.dbIsOpen == YES) {
         NSLog(@"database is Already Open");
@@ -69,12 +74,15 @@
         NSLog(@"*** ERROR: sqlite OPEN failed with error:%d = %s", sqlRetCode, sqlite3_errmsg(self.database));
     } else {
         self.dbIsOpen = YES;
+        NSLog(@"*** SUCCESS: sqlite OPEN returned retcode: %d", sqlRetCode);
     }
     
     return sqlRetCode;
 }
 
 - (int)sqlPrepareStmt:(const char *)sql_stmt {            // Prepare (compile) a stmt for use in Step
+    NSLog(@"in SQLAO sqlPrepareStmt");
+    
     if (!self.dbIsOpen) {
         NSLog(@"*** ERROR: could not PREPARE - database NOT open!");
         return SQLITE_CANTOPEN;

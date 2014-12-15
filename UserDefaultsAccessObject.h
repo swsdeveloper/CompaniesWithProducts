@@ -12,12 +12,18 @@
 @class DataAccessObject;
 
 
-@interface UserDefaultsAccessObject : NSObject
+@interface UserDefaultsAccessObject : NSObject {
+    
+    BOOL _initialLoad;
+    
+}
 
 @property (retain, nonatomic) DataAccessObject *dao;
 
 - (void)saveAllCompaniesInStandardUserDefaults;
 
 - (void)restoreAllSavedCompaniesFromStandardUserDefaults;
+
+- (void)createInitialCompaniesAndProducts;
 
 @end

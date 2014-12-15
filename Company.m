@@ -44,7 +44,7 @@ static int nextCompanyID = 0;
 }
 
 - (void)addProduct:(Product *)newProduct {
-    NSLog(@"in Company addProduct");
+    NSLog(@"in Company addProduct: %@", newProduct.name);
     if (newProduct) {
         [self.products addObject:newProduct];
     }

@@ -13,7 +13,7 @@
 
 @property (assign, nonatomic) BOOL dbIsOpen;
 
-@property (assign, nonatomic) NSString *sqlDbName;        // Full path and database name
+@property (retain, nonatomic) NSString *sqlDbName;        // Full path and database name
 
 @property (assign, nonatomic) sqlite3 *database;          // pointer to a SQLite3 database file handle
 

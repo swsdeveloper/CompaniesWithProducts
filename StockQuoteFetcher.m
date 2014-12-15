@@ -178,7 +178,7 @@
         dataAsString = nil;
     }
     
-    NSLog(@"Succeeded! Received %ld bytes of data",[self.dataReceived length]);
+    NSLog(@"Succeeded! Received %ld bytes of data",(unsigned long)[self.dataReceived length]);
     
     NSDictionary *dict = [self jsonToDictionary:self.dataReceived];
     

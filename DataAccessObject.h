@@ -14,16 +14,17 @@
 
 @class DataBaseAccessObject;
 
+@class CoreDataAccessObject;
+
 
 @interface DataAccessObject : NSObject {
-    
-    BOOL loadInitialData;
-    
+        
     int persistentStoreType;
     
     enum {
         useNSUserDefaults = 1,
-        useSqlite = 2
+        useSqlite = 2,
+        useCoreData = 3
     };
     
 }
@@ -39,6 +40,8 @@
 @property (retain, nonatomic) UserDefaultsAccessObject *uDAO;
 
 @property (retain, nonatomic) DataBaseAccessObject *dBAO;
+
+@property (retain, nonatomic) CoreDataAccessObject *cDAO;
 
 
 // Class method for creating Singleton object
@@ -58,7 +61,5 @@
 
 - (void)saveAllCompanies;
 - (void)restoreAllCompanies;
-
-- (void)createInitialCompaniesAndProducts;
 
 @end

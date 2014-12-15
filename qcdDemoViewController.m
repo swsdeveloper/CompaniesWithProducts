@@ -186,7 +186,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        // Delete the row from the data source
+        // Delete the company from the data source
         [self.dao removeCompanyAtIndex:indexPath.row];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];   // delete the company from the tableView

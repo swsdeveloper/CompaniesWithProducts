@@ -19,6 +19,8 @@
 		0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */; };
 		0A45B2F01A3A1B7900B6EF4E /* StockQuoteFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */; };
 		0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */; };
+		0AAABA341A3F7245009E158C /* CompaniesProductsDatabase in Resources */ = {isa = PBXBuildFile; fileRef = 0AAABA331A3F722F009E158C /* CompaniesProductsDatabase */; };
+		0AAABA371A3F91C5009E158C /* CoreDataAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAABA361A3F91C5009E158C /* CoreDataAccessObject.m */; };
 		0ACA11B31A3A22370064BC14 /* NSObject+BVJSONStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA11B01A3A22370064BC14 /* NSObject+BVJSONStringCategory.m */; };
 		0ACA11B41A3A22370064BC14 /* NSString+FindSubstringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA11B21A3A22370064BC14 /* NSString+FindSubstringCategory.m */; };
 		0ACA11B61A3A23720064BC14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACA11B51A3A23720064BC14 /* Images.xcassets */; };
@@ -84,6 +86,9 @@
 		0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockQuoteFetcher.m; sourceTree = "<group>"; };
 		0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsAccessObject.m; sourceTree = "<group>"; };
 		0A45B2FF1A3A1CBC00B6EF4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		0AAABA331A3F722F009E158C /* CompaniesProductsDatabase */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompaniesProductsDatabase; sourceTree = "<group>"; };
+		0AAABA351A3F91C5009E158C /* CoreDataAccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataAccessObject.h; sourceTree = "<group>"; };
+		0AAABA361A3F91C5009E158C /* CoreDataAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataAccessObject.m; sourceTree = "<group>"; };
 		0ACA11AF1A3A22370064BC14 /* NSObject+BVJSONStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BVJSONStringCategory.h"; sourceTree = "<group>"; };
 		0ACA11B01A3A22370064BC14 /* NSObject+BVJSONStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BVJSONStringCategory.m"; sourceTree = "<group>"; };
 		0ACA11B11A3A22370064BC14 /* NSString+FindSubstringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FindSubstringCategory.h"; sourceTree = "<group>"; };
@@ -140,9 +145,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AAABA2D1A3BCBC7009E158C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				0AAABA331A3F722F009E158C /* CompaniesProductsDatabase */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		0ACA11FE1A3A2BA80064BC14 /* CompaniesAndProducts */ = {
 			isa = PBXGroup;
 			children = (
+				0AAABA2D1A3BCBC7009E158C /* Database */,
 				0ACA12001A3A2BD40064BC14 /* Common */,
 				0ACA12021A3A2C560064BC14 /* Models */,
 				0ACA12011A3A2C0E0064BC14 /* Views */,
@@ -194,6 +208,8 @@
 			children = (
 				0A45B2C71A3A1B6400B6EF4E /* DataAccessObject.h */,
 				0A45B2D61A3A1B7900B6EF4E /* DataAccessObject.m */,
+				0AAABA351A3F91C5009E158C /* CoreDataAccessObject.h */,
+				0AAABA361A3F91C5009E158C /* CoreDataAccessObject.m */,
 				0A45B2C81A3A1B6400B6EF4E /* DataBaseAccessObject.h */,
 				0A45B2D71A3A1B7900B6EF4E /* DataBaseAccessObject.m */,
 				0A45B2D11A3A1B6400B6EF4E /* UserDefaultsAccessObject.h */,
@@ -380,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAABA341A3F7245009E158C /* CompaniesProductsDatabase in Resources */,
 				0ACA12231A3A2E7D0064BC14 /* Lumia.png in Resources */,
 				0ACA12271A3A2E7D0064BC14 /* WindowsPhone.jpeg in Resources */,
 				0ACA12191A3A2E7D0064BC14 /* EverythingLogo.png in Resources */,
@@ -426,6 +443,7 @@
 				0A45B2F01A3A1B7900B6EF4E /* StockQuoteFetcher.m in Sources */,
 				0A45B2E41A3A1B7900B6EF4E /* ChildViewController.m in Sources */,
 				0A45B2E91A3A1B7900B6EF4E /* main.m in Sources */,
+				0AAABA371A3F91C5009E158C /* CoreDataAccessObject.m in Sources */,
 				0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */,
 				0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */,
 				0ACA11B41A3A22370064BC14 /* NSString+FindSubstringCategory.m in Sources */,

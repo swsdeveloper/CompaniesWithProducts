@@ -16,9 +16,11 @@
 @class SQLiteAccessObject;
 
 
-@interface DataBaseAccessObject : NSObject
+@interface DataBaseAccessObject : NSObject <NSFileManagerDelegate>
 
 @property (retain, nonatomic) DataAccessObject *dao;
+
+@property (retain, nonatomic) NSString *databaseName;
 
 @property (retain, nonatomic) NSString *databasePath;
 
