@@ -27,6 +27,8 @@
         useCoreData = 3
     };
     
+    NSArray *_persistentStoreNames;
+    
 }
 
 @property (retain, nonatomic) NSMutableArray *companies; // Array of Company objects

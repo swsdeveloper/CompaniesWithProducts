@@ -104,15 +104,15 @@
     Company *aCompany = [[Company alloc] initWithName:@"Apple" logo:@"AppleLogo.jpeg" stockSymbol:@"AAPL"];
     
     Product *a1Product = [[Product alloc] initWithName:@"iPad Air"
-                                                  logo:[UIImage imageNamed:@"iPadAir.png"]
+                                                  logo:@"iPadAir.png"
                                                    url:[NSURL URLWithString:@"https://www.apple.com/ipad-air-2/"]
                                                company:@"Apple"];
     Product *a2Product = [[Product alloc] initWithName:@"iPod Touch"
-                                                  logo:[UIImage imageNamed:@"iPodTouch.jpeg"]
+                                                  logo:@"iPodTouch.jpeg"
                                                    url:[NSURL URLWithString:@"https://www.apple.com/ipod-touch/"]
                                                company:@"Apple"];
     Product *a3Product = [[Product alloc] initWithName:@"iPhone 6"
-                                                  logo:[UIImage imageNamed:@"iPhone6.jpeg"]
+                                                  logo:@"iPhone6.jpeg"
                                                    url:[NSURL URLWithString:@"https://www.apple.com/iphone-6/"]
                                                company:@"Apple"];
     [aCompany addProduct:a1Product];
@@ -122,15 +122,15 @@
     Company *bCompany = [[Company alloc] initWithName:@"Samsung" logo:@"SamsungLogo.jpeg" stockSymbol:@"SSNLF"];
     
     Product *b1Product = [[Product alloc] initWithName:@"Galaxy S4"
-                                                  logo:[UIImage imageNamed:@"GalaxyS4.jpeg"]
+                                                  logo:@"GalaxyS4.jpeg"
                                                    url:[NSURL URLWithString:@"http://www.samsung.com/global/microsite/galaxys4/"]
                                                company:@"Samsung"];
     Product *b2Product = [[Product alloc] initWithName:@"Galaxy Note"
-                                                  logo:[UIImage imageNamed:@"GalaxyNote.png"]
+                                                  logo:@"GalaxyNote.png"
                                                    url:[NSURL URLWithString:@"http://www.samsung.com/global/microsite/galaxynote4/note4_main.html"]
                                                company:@"Samsung"];
     Product *b3Product = [[Product alloc] initWithName:@"Galaxy Tab"
-                                                  logo:[UIImage imageNamed:@"GalaxyTab.jpeg"]
+                                                  logo:@"GalaxyTab.jpeg"
                                                    url:[NSURL URLWithString:@"http://www.samsung.com/us/mobile/galaxy-tab/SM-T230NZWAXAR"]
                                                company:@"Samsung"];
     [bCompany addProduct:b1Product];
@@ -140,15 +140,15 @@
     Company *cCompany = [[Company alloc] initWithName:@"Microsoft" logo:@"MicrosoftLogo.png" stockSymbol:@"MSFT"];
     
     Product *c1Product = [[Product alloc] initWithName:@"Windows Phone 8"
-                                                  logo:[UIImage imageNamed:@"WindowsPhone.jpeg"]
+                                                  logo:@"WindowsPhone.jpeg"
                                                    url:[NSURL URLWithString:@"http://www.windowsphone.com/en-us"]
                                                company:@"Microsoft"];
     Product *c2Product = [[Product alloc] initWithName:@"Surface Pro 3 Tablet"
-                                                  logo:[UIImage imageNamed:@"SurfacePro.png"]
+                                                  logo:@"SurfacePro.png"
                                                    url:[NSURL URLWithString:@"http://www.microsoft.com/surface/en-us/products/surface-pro-2"]
                                                company:@"Microsoft"];
     Product *c3Product = [[Product alloc] initWithName:@"Lumia 1520"
-                                                  logo:[UIImage imageNamed:@"Lumia.png"]
+                                                  logo:@"Lumia.png"
                                                    url:[NSURL URLWithString:@"http://www.expansys-usa.com/nokia-lumia-1520-unlocked-32gb-yellow-rm-937-255929/"]
                                                company:@"Microsoft"];
     [cCompany addProduct:c1Product];
@@ -158,15 +158,15 @@
     Company *dCompany = [[Company alloc] initWithName:@"Everything" logo:@"EverythingLogo.png" stockSymbol:@"EVRY"];
     
     Product *d1Product = [[Product alloc] initWithName:@"The I Can't Believe It's An Everything Tablet"
-                                                  logo:[UIImage imageNamed:@"EverythingTablet.png"]
+                                                  logo:@"EverythingTablet.png"
                                                    url:[NSURL URLWithString:@"http://instagram.com/everythingtablet"]
                                                company:@"Everything"];
     Product *d2Product = [[Product alloc] initWithName:@"The Amazing Everything Phone"
-                                                  logo:[UIImage imageNamed:@"EverythingPhone.jpg"]
+                                                  logo:@"EverythingPhone.jpg"
                                                    url:[NSURL URLWithString:@"http://everything.me"]
                                                company:@"Everything"];
     Product *d3Product = [[Product alloc] initWithName:@"The Holds Everything 100TB Music Player"
-                                                  logo:[UIImage imageNamed:@"EverythingMusicPlayer.png"]
+                                                  logo:@"EverythingMusicPlayer.png"
                                                    url:[NSURL URLWithString:@"http://www.umplayer.com"]
                                                company:@"Everything"];
     [dCompany addProduct:d1Product];

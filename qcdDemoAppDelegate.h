@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Steven Shatz. All rights reserved.
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 
 @class DataAccessObject;
@@ -18,5 +19,6 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @property (assign, nonatomic) DataAccessObject *sharedDAO;
+
 
 @end

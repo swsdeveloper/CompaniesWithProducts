@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Steven Shatz. All rights reserved.
 
 #import "Company.h"
+#import "Constants.h"
 
 
 static int nextCompanyID = 0;
@@ -13,10 +14,10 @@ static int nextCompanyID = 0;
 
 @implementation Company
 
-//-(Company *)init {
-//    NSLog(@"in Company init");
-//    return [self initWithName:nil logo:nil stockSymbol:nil];
-//}
+
+- (id)init {
+    return [self initWithName:@"" logo:@"" stockSymbol:@""];
+}
 
 -(id)initWithName:(NSString *)coName logo:(NSString *)coLogo stockSymbol:(NSString *)coStockSymbol {
     
@@ -24,10 +25,12 @@ static int nextCompanyID = 0;
     if (self) {
         _name = [[NSString alloc] initWithString:coName];
         _logo = [[UIImage imageNamed:coLogo] retain];
+        _logoFileName = [coLogo retain];
         _products = [[NSMutableArray alloc] initWithCapacity:5];
         _stockSymbol = [[NSString alloc] initWithString:coStockSymbol];
         _deleted = NO;
         _sortID = nextCompanyID++;
+        _coreDataID = nil;
     }
     
     //NSLog(@"_name = %@", _name);
@@ -38,8 +41,10 @@ static int nextCompanyID = 0;
     NSLog(@"in Company dealloc");
     [_name release];
     [_logo release];
+    [_logoFileName release];
     [_products release];
     [_stockSymbol release];
+    [_coreDataID release];
     [super dealloc];
 }
 

@@ -1,0 +1,78 @@
+
+
+Core Data Object Model:
+-----------------------
+Managed Object Model (NSManagedObjectModel) -- |self.model| -- the Schema that describes the Managed Objects -- |CompaniesProducts.xcdatamodeld|
+
+A model contains:
+-- NSEntityDescription objects (see Entities, below)
+-- NSFetchRequest (template for an entity's NSFetchedPropertyDescription) - can include variables
+
+
+Managed Objects (NSManagedObject):
+- Company Entity has attributes: companyName,   coLogo,     coStockSymbol,      coDeleted, and   coSortID
+- Product Entity has attributes: productName, prodLogo, prodUrl, prodCompany, prodDeleted, and prodSortID
+
+
+Entities (NSEntityDescription) have three types of properties:
+
+-- Attribute Description (NSAttributeDescription):
+-- Name (cannot be the same as any parameterless method name)
+-- Type (String (NSString), Date (NSDate), Int32 (NSNumber), etc.)
+-- Name of the class that represents it at run-time
+-- Default value
+
+-- Relationship Description (NSRelationshipDescription):
+-- Name
+-- Maximum count
+-- Destination entity
+
+-- Fetched Property Descriptions (NSFetchedPropertyDescription):
+-- The criteria for the most recent NSFetchRequest
+-- A weak, one-way relationship
+
+
+All Managed Objects must be Registered with a Managed Object Context.
+-- There can be more than one Managed Object Context,
+but if the same object is registered with more than one context, care must be taken when updating that object's Persistent Store!!!
+-- If a store's object is in more than one context, the object is treated as unique in each context (i.e., it is unrelated to its other representations)
+
+Managed Object Context -- |self.context| -- contains Collections of Managed Objects (Companies and Products) and points to the Persistent Store Coordinator. This can also have an Undo Manager. Think of this as a temporary holding area. Until the context's content is saved, the Persistent Store remains untouched!
+
+
+When a context is created, nothing is brought into it. Only Fetch requests (see below) fill it with relevant data.
+
+You Add and Remove objects from the Context. You can also modify object Attributes (i.e., its fields) and change the Relationship between objects.
+
+The context tracks changes to its Objects, to the Attributes of its objects, and to the Relationships between its objects. This allows for Undo/Redo (within the Context).
+
+When you save changes from the Context to the Persistent Store, the store's records are updated, new ones are automatically added, and deleted ones are removed.
+
+
+
+Persistent Document -- |CompaniesAndProducts.xcodeproj| -- points to Managed Object Context
+
+Persistence Stack -- all the objects involved in Core Data
+
+
+
+Persistent Store Coordinator -- |psc| -- points to one or more Managed Object Context(s) and one or more Peristent Store(s). It's an interface.
+
+Persistent Store (in this case, a SQLite database) -- points to Persistent Store Coordinator and to the UI View
+
+
+
+Accesses can be done through a Fetch Request (NSFetchRequest) -- |request|
+
+There are 3 parts to a Fetch Request:
+-- the Entity Name of the object being fetched
+-- a Predicate object (with conditions that the fetched object must match)
+-- an array of Sort Descriptors (indicating the order in which fetched objects should appear)
+
+Fetch Request properties include:  Entity Description, Predicate, and Sort Descriptor(s):
+-- Entity Description -- |e|
+-- Predicate (a sort of SQL command) refines the results of a Fetch Request -- |p|
+-- Sort Descriptor(s) sets sort order for results of a Fetch Request -- |sortByName|
+
+Fetch Request is sent to a Managed Object Context
+

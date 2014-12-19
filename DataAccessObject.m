@@ -50,9 +50,13 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     // * Set Source of Persistent Storage *
     // ************************************
     
-//     persistentStoreType = useNSUserDefaults;
-    persistentStoreType = useSqlite;
-//    persistentStoreType = useCoreData;
+    _persistentStoreNames = [[NSArray alloc] initWithObjects:@"NSUserDefaults", @"SQLite", @"Core Data", nil];
+    
+//    persistentStoreType = useNSUserDefaults;
+//    persistentStoreType = useSqlite;
+    persistentStoreType = useCoreData;
+    
+    NSLog(@"\n\nUsing Persistant Store Type: %@\n\n", _persistentStoreNames[persistentStoreType-1]);
     
     if (persistentStoreType == useNSUserDefaults) {
         _uDAO = [[UserDefaultsAccessObject alloc] init];
@@ -63,7 +67,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     }
     
     if (persistentStoreType == useCoreData) {
-        _dBAO = [[CoreDataAccessObject alloc] init];
+        _cDAO = [[CoreDataAccessObject alloc] init];
     }
     
     return self;
@@ -81,6 +85,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     
     [_uDAO release];
     [_dBAO release];
+    [_cDAO release];
     
     [super dealloc];
 }
@@ -140,6 +145,10 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     if (persistentStoreType == useSqlite) {
         [self.dBAO saveAllCompaniesInSqlite];
     }
+    
+    if (persistentStoreType == useCoreData) {
+        [self.cDAO saveAllCompaniesInCoreData];
+    }
 }
 
 - (void)restoreAllCompanies {
@@ -151,6 +160,10 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     
     if (persistentStoreType == useSqlite) {
         [self.dBAO restoreAllCompaniesFromSqlite];
+    }
+    
+    if (persistentStoreType == useCoreData) {
+        [self.cDAO restoreAllCompaniesFromCoreData];
     }
 }
 
@@ -168,7 +181,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
 }
 
 - (void)removeCompanyAtIndex:(NSInteger)index {
-    NSLog(@"in DAO removeCompanyAtIndex");
+    NSLog(@"\nin DAO removeCompanyAtIndex");
     
     [self.companies[index] removeAllProducts];      // Flag this company's entire |products| array as Deleted
     
@@ -185,6 +198,7 @@ static DataAccessObject *sharedDAO = nil;  // create a single static variable fo
     //NSLog(@"\nMove %@ From Index: %ld, To Index: %ld", [[self.companies objectAtIndex:fromIndex] name] ,fromIndex, toIndex);
     
     NSMutableArray *saveSortIDs = [[NSMutableArray alloc] initWithObjects:nil];
+    
     for (Company *company in self.companies) {
         [saveSortIDs addObject:[NSNumber numberWithInteger:company.sortID]];
     }

@@ -16,4 +16,6 @@
 
 @property (retain, nonatomic) NSURL *url;
 
+@property (retain, nonatomic) NSURLRequest *urlRequest;
+
 @end

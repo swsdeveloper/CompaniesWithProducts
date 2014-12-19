@@ -33,7 +33,6 @@
     [super viewDidLoad];
     
     qcdDemoAppDelegate *appDelegate = (qcdDemoAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
     self.dao = appDelegate.sharedDAO;
 
     // Uncomment the following line to preserve selection between presentations.

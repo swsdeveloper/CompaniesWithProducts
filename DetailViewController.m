@@ -16,6 +16,7 @@
     // NSLog(@"in DetailViewController dealloc");
     [_webView release];
     [_url release];
+    [_urlRequest release];
     [super dealloc];
 }
 
@@ -42,7 +43,16 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     // NSLog(@"in DetailViewController viewWillDisappear");
+    
     [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [_webView stopLoading];
+    
+    NSURL *url = [NSURL URLWithString:@"about:blank"];
+    
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 //- (void)loadRequestFromString:(NSString*)urlString
@@ -59,9 +69,9 @@
     
     // NSLog(@"in DetailViewController loadRequestFromURL");
     
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    self.urlRequest = [NSURLRequest requestWithURL:url];
     
-    [self.webView loadRequest:urlRequest];
+    [self.webView loadRequest:self.urlRequest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,15 +88,17 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    // NSLog(@"in DetailViewController webViewDidStartLoad");
+     NSLog(@"in DetailViewController webViewDidStartLoad");
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    // NSLog(@"in DetailViewController webViewDidFinishLoad");
+     NSLog(@"in DetailViewController webViewDidFinishLoad");
+    [webView stopLoading];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    // NSLog(@"in DetailViewController webView:didFailWithError: %@", [error localizedDescription]);
+     NSLog(@"in DetailViewController webView:didFailWithError: %@", [error localizedDescription]);
+    [webView stopLoading];
 }
 
 @end

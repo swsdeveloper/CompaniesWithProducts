@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Steven Shatz. All rights reserved.
 
 #import "Product.h"
+#import "Constants.h"
 
 
 static int nextProductID = 0;
@@ -13,22 +14,23 @@ static int nextProductID = 0;
 
 @implementation Product
 
-//-(Product *)init {
-//    NSLog(@"in Product init");
-//    return [self initWithName:nil logo:nil url:nil];
-//}
+- (id)init {
+    return [self initWithName:@"" logo:@"" url:NULL company:@""];
+}
 
--(id)initWithName:(NSString *)prodName logo:(UIImage *)prodLogo url:(NSURL *)prodUrl company:(NSString *)prodCompany {
+-(id)initWithName:(NSString *)prodName logo:(NSString *)prodLogo url:(NSURL *)prodUrl company:(NSString *)prodCompany {
     NSLog(@"in Product initWithName");
     
     self = [super init];
     if (self) {
         _companyName = [prodCompany retain];
         _name = [prodName retain];
-        _logo = [prodLogo retain];
+        _logo = [[UIImage imageNamed:prodLogo] retain];
+        _logoFileName = [prodLogo retain];
         _url = [prodUrl retain];
         _deleted = NO;
         _sortID = nextProductID++;
+        _coreDataID = nil;
     }
     return self;
 }
@@ -38,7 +40,9 @@ static int nextProductID = 0;
     [_companyName release];
     [_name release];
     [_logo release];
+    [_logoFileName release];
     [_url release];
+    [_coreDataID release];
     [super dealloc];
 }
 

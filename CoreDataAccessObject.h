@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Company.h"
-#import "Product.h"
+#import <CoreData/CoreData.h>
+
 
 @class DataAccessObject;
 
@@ -21,17 +21,17 @@
 
 @property (retain, nonatomic) NSString *databasePath;
 
+@property(retain, nonatomic) NSManagedObjectContext *context;
+
+@property(retain, nonatomic) NSManagedObjectModel *model;
+
+@property(retain, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+
 - (id)init;
 
 - (void)saveAllCompaniesInCoreData;
 
-- (void)restoreAllCompaniesFromCoreData;
-
-- (NSMutableArray *)retrieveAllActiveCompaniesFromCoreData;
-
-- (void)updateCompanyInCoreData:(Company *)company;
-
-- (void)updateProductInCoreData:(Product *)product;
-
+- (void)restoreAllCompaniesFromCoreData;    // updates self.dao.companies
 
 @end

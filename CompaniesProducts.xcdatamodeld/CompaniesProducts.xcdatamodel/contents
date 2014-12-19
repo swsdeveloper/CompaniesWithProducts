@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Company" syncable="YES">
+        <attribute name="co_deleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="co_logo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="co_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="co_sortid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="co_stocksymbol" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Product" syncable="YES">
+        <attribute name="prod_co_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prod_deleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="prod_logo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prod_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prod_sortid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="prod_url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Company" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Product" positionX="108" positionY="11" width="128" height="133"/>
+    </elements>
+</model>

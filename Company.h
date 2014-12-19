@@ -9,6 +9,9 @@
 #import "Product.h"
 
 
+@class NSManagedObjectID;
+
+
 @interface Company : NSObject <NSCoding>
 
 
@@ -16,13 +19,17 @@
 
 @property (retain, nonatomic) UIImage *logo;
 
+@property (retain, nonatomic) NSString *logoFileName;   // For Core Data only (because image file name cannot be gotten from a UIImage)
+
 @property (retain, nonatomic) NSMutableArray *products;
 
 @property (retain, nonatomic) NSString *stockSymbol;
 
-@property (assign, nonatomic) BOOL deleted;     // If YES, this company has been marked as deleted
+@property (assign, nonatomic) BOOL deleted;             // If YES, this company has been marked as deleted
 
 @property (assign, nonatomic) NSInteger sortID;
+
+@property (retain, nonatomic) NSManagedObjectID *coreDataID;    // For Core Data only
 
 
 -(id)initWithName:(NSString *)coName logo:(NSString *)coLogo stockSymbol:(NSString *)coStockSymbol;
