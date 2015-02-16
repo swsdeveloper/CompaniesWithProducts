@@ -28,7 +28,7 @@
 }
 
 - (void)viewDidLoad {
-    NSLog(@"in ChildViewController initWithStyle");
+    NSLog(@"in ChildViewController viewDidLoad");
     
     [super viewDidLoad];
     

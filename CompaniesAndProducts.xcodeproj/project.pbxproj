@@ -19,6 +19,11 @@
 		0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2DF1A3A1B7900B6EF4E /* SQLiteAccessObject.m */; };
 		0A45B2F01A3A1B7900B6EF4E /* StockQuoteFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */; };
 		0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */; };
+		0A60C8F01A92717E0019A0A7 /* ChildCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A60C8EE1A92717E0019A0A7 /* ChildCollectionViewController.m */; };
+		0A60C8F11A92717E0019A0A7 /* ChildCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A60C8EF1A92717E0019A0A7 /* ChildCollectionViewController.xib */; };
+		0A60C8F31A92748A0019A0A7 /* NibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A60C8F21A92748A0019A0A7 /* NibCell.xib */; };
+		0A60C8F61A927C110019A0A7 /* ChildCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A60C8F51A927C110019A0A7 /* ChildCollectionViewCell.m */; };
+		0A60C8F81A927D090019A0A7 /* ChildCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A60C8F71A927D090019A0A7 /* ChildCollectionViewCell.xib */; };
 		0AAABA341A3F7245009E158C /* CompaniesProductsDatabase in Resources */ = {isa = PBXBuildFile; fileRef = 0AAABA331A3F722F009E158C /* CompaniesProductsDatabase */; };
 		0AAABA371A3F91C5009E158C /* CoreDataAccessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAABA361A3F91C5009E158C /* CoreDataAccessObject.m */; };
 		0AAABA391A3F9E33009E158C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAABA381A3F9E33009E158C /* CoreData.framework */; };
@@ -92,6 +97,13 @@
 		0A45B2E01A3A1B7900B6EF4E /* StockQuoteFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockQuoteFetcher.m; sourceTree = "<group>"; };
 		0A45B2E11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsAccessObject.m; sourceTree = "<group>"; };
 		0A45B2FF1A3A1CBC00B6EF4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		0A60C8ED1A92717E0019A0A7 /* ChildCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewController.h; sourceTree = "<group>"; };
+		0A60C8EE1A92717E0019A0A7 /* ChildCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildCollectionViewController.m; sourceTree = "<group>"; };
+		0A60C8EF1A92717E0019A0A7 /* ChildCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildCollectionViewController.xib; sourceTree = "<group>"; };
+		0A60C8F21A92748A0019A0A7 /* NibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NibCell.xib; sourceTree = "<group>"; };
+		0A60C8F41A927C110019A0A7 /* ChildCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildCollectionViewCell.h; sourceTree = "<group>"; };
+		0A60C8F51A927C110019A0A7 /* ChildCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildCollectionViewCell.m; sourceTree = "<group>"; };
+		0A60C8F71A927D090019A0A7 /* ChildCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildCollectionViewCell.xib; sourceTree = "<group>"; };
 		0AAABA331A3F722F009E158C /* CompaniesProductsDatabase */ = {isa = PBXFileReference; lastKnownFileType = file; path = CompaniesProductsDatabase; sourceTree = "<group>"; };
 		0AAABA351A3F91C5009E158C /* CoreDataAccessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataAccessObject.h; sourceTree = "<group>"; };
 		0AAABA361A3F91C5009E158C /* CoreDataAccessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataAccessObject.m; sourceTree = "<group>"; };
@@ -220,12 +232,19 @@
 			children = (
 				0A45B2CE1A3A1B6400B6EF4E /* qcdDemoViewController.h */,
 				0A45B2DE1A3A1B7900B6EF4E /* qcdDemoViewController.m */,
+				0ACA11FA1A3A2AF40064BC14 /* qcdDemoViewController.xib */,
 				0A45B2C41A3A1B6400B6EF4E /* ChildViewController.h */,
 				0A45B2D41A3A1B7900B6EF4E /* ChildViewController.m */,
+				0ACA11F71A3A2ABE0064BC14 /* ChildViewController.xib */,
+				0A60C8ED1A92717E0019A0A7 /* ChildCollectionViewController.h */,
+				0A60C8EE1A92717E0019A0A7 /* ChildCollectionViewController.m */,
+				0A60C8EF1A92717E0019A0A7 /* ChildCollectionViewController.xib */,
+				0A60C8F21A92748A0019A0A7 /* NibCell.xib */,
+				0A60C8F41A927C110019A0A7 /* ChildCollectionViewCell.h */,
+				0A60C8F51A927C110019A0A7 /* ChildCollectionViewCell.m */,
+				0A60C8F71A927D090019A0A7 /* ChildCollectionViewCell.xib */,
 				0A45B2C91A3A1B6400B6EF4E /* DetailViewController.h */,
 				0A45B2D81A3A1B7900B6EF4E /* DetailViewController.m */,
-				0ACA11FA1A3A2AF40064BC14 /* qcdDemoViewController.xib */,
-				0ACA11F71A3A2ABE0064BC14 /* ChildViewController.xib */,
 				0ACA11F91A3A2AF40064BC14 /* DetailViewController.xib */,
 			);
 			name = Views;
@@ -427,12 +446,15 @@
 			files = (
 				0AAABA341A3F7245009E158C /* CompaniesProductsDatabase in Resources */,
 				0AAABADF1A43C16A009E158C /* images.xcassets in Resources */,
+				0A60C8F81A927D090019A0A7 /* ChildCollectionViewCell.xib in Resources */,
+				0A60C8F11A92717E0019A0A7 /* ChildCollectionViewController.xib in Resources */,
 				0ACA12231A3A2E7D0064BC14 /* Lumia.png in Resources */,
 				0ACA12271A3A2E7D0064BC14 /* WindowsPhone.jpeg in Resources */,
 				0AAABB171A43D633009E158C /* LaunchScreen.xib in Resources */,
 				0AAABABF1A411964009E158C /* CoreDataNotes.txt in Resources */,
 				0ACA12191A3A2E7D0064BC14 /* EverythingLogo.png in Resources */,
 				0ACA12221A3A2E7D0064BC14 /* iPodTouch.jpeg in Resources */,
+				0A60C8F31A92748A0019A0A7 /* NibCell.xib in Resources */,
 				0ACA12251A3A2E7D0064BC14 /* SamsungLogo.jpeg in Resources */,
 				0ACA121F1A3A2E7D0064BC14 /* GalaxyTab.jpeg in Resources */,
 				0ACA12241A3A2E7D0064BC14 /* MicrosoftLogo.png in Resources */,
@@ -481,7 +503,9 @@
 				0A45B2F11A3A1B7900B6EF4E /* UserDefaultsAccessObject.m in Sources */,
 				0A45B2EF1A3A1B7900B6EF4E /* SQLiteAccessObject.m in Sources */,
 				0ACA11B41A3A22370064BC14 /* NSString+FindSubstringCategory.m in Sources */,
+				0A60C8F61A927C110019A0A7 /* ChildCollectionViewCell.m in Sources */,
 				0A45B2ED1A3A1B7900B6EF4E /* qcdDemoAppDelegate.m in Sources */,
+				0A60C8F01A92717E0019A0A7 /* ChildCollectionViewController.m in Sources */,
 				0ACA11B31A3A22370064BC14 /* NSObject+BVJSONStringCategory.m in Sources */,
 				0A45B2E81A3A1B7900B6EF4E /* DetailViewController.m in Sources */,
 			);

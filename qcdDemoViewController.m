@@ -11,6 +11,7 @@
 #import "DataAccessObject.h"
 #import "StockQuoteFetcher.h"
 #import "ChildViewController.h"
+#import "ChildCollectionViewController.h"
 
 
 @interface qcdDemoViewController ()
@@ -253,6 +254,10 @@
 //    NSLog(@"self.dao.products[0].url = %@", urlString);
     
     [self.navigationController pushViewController:self.childVC animated:YES];
+    
+    // To test CollectionView instead of TableView, un-comment the following (and comment the pushVC line above)
+    //ChildCollectionViewController *collectionViewChildVC = [[ChildCollectionViewController alloc] init];
+    //[self.navigationController pushViewController:collectionViewChildVC animated:YES];
 }
 
 @end

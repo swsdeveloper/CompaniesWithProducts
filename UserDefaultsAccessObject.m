@@ -119,7 +119,7 @@
     [aCompany addProduct:a2Product];
     [aCompany addProduct:a3Product];
     
-    Company *bCompany = [[Company alloc] initWithName:@"Samsung" logo:@"SamsungLogo.jpeg" stockSymbol:@"SSNLF"];
+    Company *bCompany = [[Company alloc] initWithName:@"Samsung" logo:@"SamsungLogo.jpeg" stockSymbol:@"005930.KS"];    // instead of SSNLF
     
     Product *b1Product = [[Product alloc] initWithName:@"Galaxy S4"
                                                   logo:@"GalaxyS4.jpeg"

@@ -352,7 +352,7 @@
     // Companies
     
     [self createCompanyWithName:@"Apple" logo:@"AppleLogo.jpeg" stockSymbol:@"AAPL" sortID:0];
-    [self createCompanyWithName:@"Samsung" logo:@"SamsungLogo.jpeg" stockSymbol:@"SSNLF" sortID:1];
+    [self createCompanyWithName:@"Samsung" logo:@"SamsungLogo.jpeg" stockSymbol:@"005930.KS" sortID:1]; // instead of SSNLF
     [self createCompanyWithName:@"Microsoft" logo:@"MicrosoftLogo.png" stockSymbol:@"MSFT" sortID:2];
     [self createCompanyWithName:@"Everything" logo:@"EverythingLogo.png" stockSymbol:@"EVRY" sortID:3];
     
